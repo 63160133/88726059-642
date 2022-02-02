@@ -1,0 +1,23 @@
+<html>
+<head><title>re-direct based upon window size</title>
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+<body>
+<script language=JavaScript>
+function windowHeight(){
+    if(document.body && document.body.clientHeight){ //test for IE
+        return document.body.clientHeight;
+    }else if(window.innerHeight){ //test for NS
+        return window.innerHeight;
+    }else{
+        return 0;
+    }//both tests have failed
+}
+
+if(windowHeight() >= 300){
+    document.location = "your html or http://";
+}else{
+    document.location = "your html or http://";
+}
+</script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d731cb7ac7aca2a',m:'7d22MEXs2veVDjI7edjemoBuWUgeD1Uj6n1.5Mu7i3Y-1643801686-0-ASxXiNR8/SwPtiQjeIeqpLgfzWisjJZL6GaINVbxZxjrB2tZvMZ9RyVw7UUcsyqut4LcTwVTYmdB8wfeCNFi/LNU9cex4G3Nx8mR9lfmdqzmI6IQTWLK1K8HD4A6gJUwsd+3dXeZmSYbwcsp42o/sKs1fpa9ZjMGg4UvuVkE+m6cbCvan6EUgiqJtAOJcBtz0g==',s:[0xf9b63660e3,0x072d80e02a],}})();</script></body>
+</html>

@@ -1,0 +1,29 @@
+<HTML>
+<HEAD><TITLE>Example of alert, comfirm, prompt</TITLE>
+<SCRIPT LANGUAGE=JavaScript>
+function alertUser(){
+    alert("An alert box contains an exclamation mark");
+}
+function confirmUser(){
+    var msg="\n please confirm that you want\n"+
+            "to test another button?";
+    if(comfirm(msg))
+        document.write("<h2>You selected OK</h2>");
+    else
+        document.write("<h2>You selected Cancel</h2>");
+}
+function promptUser(){
+    namel=prompt("What is your name?"," ");
+    document.write("<h2>welcome to this page" + namel + "</h2>");
+}
+</SCRIPT>
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></HEAD>
+<BODY>
+welcome to this page<br>
+<FORM>
+    <INPUT TYPE="button" VALUE="Click here to test alert()" onclick="alertUser()"><BR>
+    <INPUT TYPE="button" VALUE="Click here to test confirm()" onclick="conUserfirm()"><BR>   
+    <INPUT TYPE="button" VALUE="Click here to test prompt()" onclick="promptUser()">
+</FORM>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d731ca939cbca2a',m:'QddV5DmgEX3NH1jEkvgJZbKbDMIvCisrGjOSFs6BADE-1643801683-0-ASNE270D2oxSXmAjDjrkcHR+E6MjEh47FV1Symzn83VNruT/gtC6kwE6LUwjzjSUuHGcooQSzTjoFzcfMC4vxSgyjbeltvCo8k4mvkvdEiU4iFOX0oZlf1QaxINfVsefszP12/wdYIYzRtu6PnMcFKWmFYXVwrqsCEKk88OBptNEMyr23pO9OlnlR+mQv2TmjQ==',s:[0x3323a0b07b,0xfd811ef1ed],}})();</script></BODY>
+</HTML>

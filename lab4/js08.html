@@ -1,0 +1,25 @@
+<html>
+<head><title>Image rollover</title>
+<script language=javascript>
+function highlightdocs(){
+    if(document.images){document.images["docs"].src = docsOn.src; }
+}
+function unhighlightdocs(){
+    if(document.images){document.images["docs"].src = docsOff.src; }
+}
+if(document.images){
+    docsOn = new Image();
+    docsOn.src = "gg_color.png";
+    docsOff = new Image();
+    docsOff.src = "gg_gray.png";
+} 
+</script>
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+<body>
+<P><A HREF="http://www.google.com"
+      onMouseOver="highlightdocs()" onMouseOut="unhighlightdocs()">
+    <IMG SRC="gg_gray.png" name=docs height=256 width=256 border=0>
+    </A>
+    </P>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d731cbe69c4ca2a',m:'mWf3L35wQO92ZFI9rmuCgGvloJL823NLbUoDQ25PAtk-1643801687-0-AaC6hA0GC5zEQ3bXdS1JDMfnTDXKe2Xv1RrU+224+VLKQbsBWeCioz4fcgO6czKYlWGDxpk7QzzdfOGgCUP78tDMqRw0qdbjeEWaA67sorr/jLhJN1i56sEKMc3qXV8ZT23bpBh3WCMpwOORD7PbHrvV54ArD8OC7t9IGgiH4Ckzws39iFPsBBBVcH9WdUGu1g==',s:[0x2d3f44a030,0x3d58adf7fb],}})();</script></body>
+</html>
