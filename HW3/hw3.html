@@ -1,0 +1,59 @@
+<style>
+  body{
+      font-family: 'Courier New',Courier,monospace;
+  }
+
+  span{
+      padding-left: 3px;
+      padding-right: 3px;
+  }
+
+  .green{
+      background-color: green;
+      color: white;
+  }
+
+  .yellow{
+      background-color: gold;
+      color: black;
+  }
+
+  .red{
+      background-color: firebrick;
+      color: white;
+  }
+</style>
+<script>
+  words = ["abac","baboo","cable","daddy","eagle","faced","gaffe","hacks","ichor","jaded","label","mache","nabob","oared","pacer","qadis","rabid","sabin","tabla","ulama","vague","waddy","xenia","yacks","zambo"];
+  rndWord = words[Math.floor(Math.random()* words.length)];
+  document.write(rndWord);
+  numGuess = 6;
+  num = 1;
+
+  function doGuess() {
+      numCorrect = 0;
+      hist = document.getElementById("hist");
+      elmGuessWord = document.getElementById("guestWord")
+      guestWord = elmGuessWord.value;
+      s = "<div>";
+      for(i = 0; i < guestWord.length; i++){
+          if(rndWord.indexOf(guestWord[i]) < 0){
+            s += "<span class ='red'>"+ guestWord[i] + "</span>";
+          }else if(guestWord[i] == rndWord[i]) {
+              s += "<span class ='green'>" + guestWord[i] + "</span>";
+              numCorrect++;
+          } else {
+              s +="<span class ='yellow'>"+guestWord[i] + "</span>";
+          }
+      }
+      s += "</div>";
+      hist.innerHTML += s;
+      num++;
+      elmGuessWord.select();
+      if(numCorrect == 5) hist.innerHTML +="Win!!";
+      if(num > 6 && numCorrect != 5) hist.innerHTML += "Game Over!!!";
+  }
+</script>
+<h4>Wordle</h4>
+<input type ="text"id="guestWord"maxlength="5"><button onClick = "doGuess()">Guess</button>
+<div id = "hist"></div><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'6dcbdab208341d2b',m:'kxUrZlMtaASnlICKJb_1HsV0RCecXy_ZZ1Fh5_nNKNA-1644732214-0-Afm9BOcAd37VpOaYZC/I5Lto6gKp+sN0GsrvEf/s89JLvQF9XMhYiO9dQFfiYAH0CPG9NPUHDcxd0rhyVksAuW7+tb1gNFlLdsc3Ju2Y66QonTjR9wU4sMq6f2fmODp9UM6wktnl/661ldX0K1HhoszxjKS8HRq0U+4su07Up52VSalCZh7mogyB3+EuRKuqFg==',s:[0xcdb917af9e,0x9a19933fdc],}})();</script>
